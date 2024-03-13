@@ -14,9 +14,9 @@
 /*!**********************!*\
   !*** ./src/greet.ts ***!
   \**********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.greetLogic = void 0;\nvar startPage_1 = __webpack_require__(/*! ./startPage */ \"./src/startPage.ts\");\nfunction greetLogic() {\n    var userInput = prompt(\"Please, type here your age\");\n    if (userInput >= 40) {\n        (0, startPage_1.startPageLogic)();\n    }\n    else {\n        alert('Goodbye!');\n    }\n}\nexports.greetLogic = greetLogic;\n\n\n//# sourceURL=webpack://puzzle-demo-1/./src/greet.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.createForm = void 0;\n/*export function greetLogic () {\n\nlet userInput: any  = prompt(\"Please, type here your age\");\n\nif (userInput >= 40) {\n    startPageLogic();\n} else {\n    alert('Goodbye!');\n}\n\n}*/\nfunction createForm() {\n    // Создание формы\n    var myForm = document.createElement('form');\n    myForm.id = 'myForm';\n    // Создание и добавление поля для ввода имени\n    var nameLabel = document.createElement('label');\n    nameLabel.textContent = 'Имя:';\n    myForm.appendChild(nameLabel);\n    var firstNameInput = document.createElement('input');\n    firstNameInput.type = 'text';\n    firstNameInput.id = 'firstName';\n    firstNameInput.name = 'firstName';\n    firstNameInput.required = true;\n    myForm.appendChild(firstNameInput);\n    // Создание и добавление поля для ввода фамилии\n    var lastNameLabel = document.createElement('label');\n    lastNameLabel.textContent = 'Фамилия:';\n    myForm.appendChild(lastNameLabel);\n    var lastNameInput = document.createElement('input');\n    lastNameInput.type = 'text';\n    lastNameInput.id = 'lastName';\n    lastNameInput.name = 'lastName';\n    lastNameInput.required = true;\n    myForm.appendChild(lastNameInput);\n    // Создание и добавление кнопки \"Отправить\"\n    var submitButton = document.createElement('button');\n    submitButton.type = 'button';\n    submitButton.textContent = 'Отправить';\n    submitButton.addEventListener('click', submitForm);\n    myForm.appendChild(submitButton);\n    // Добавление формы к body\n    document.body.appendChild(myForm);\n}\nexports.createForm = createForm;\nfunction submitForm() {\n    // Получение значений из полей формы\n    var firstName = document.getElementById(\"firstName\").value;\n    var lastName = document.getElementById(\"lastName\").value;\n    // Проверка наличия данных\n    if (firstName && lastName) {\n        // Вывод результатов (в примере, просто вывод в консоль)\n        console.log(\"Вы ввели: \" + firstName + \" \" + lastName);\n    }\n    else {\n        alert(\"Пожалуйста, заполните все поля!\");\n    }\n}\n\n\n//# sourceURL=webpack://puzzle-demo-1/./src/greet.ts?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
   \**********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar greet_1 = __webpack_require__(/*! ./greet */ \"./src/greet.ts\");\n(0, greet_1.greetLogic)();\n\n\n//# sourceURL=webpack://puzzle-demo-1/./src/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n//import { greetLogic }from './greet';\nvar greet_1 = __webpack_require__(/*! ./greet */ \"./src/greet.ts\");\nvar startPage_1 = __webpack_require__(/*! ./startPage */ \"./src/startPage.ts\");\n//greetLogic();\n(0, greet_1.createForm)();\n(0, startPage_1.startPageLogic)();\n\n\n//# sourceURL=webpack://puzzle-demo-1/./src/index.ts?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
   \**************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.startPageLogic = void 0;\nfunction startPageLogic() {\n    var myDiv = document.createElement('div');\n    myDiv.classList.add('myDiv');\n    myDiv.innerHTML = '<h1> HELLOOOOOOO </h1>';\n    document.body.appendChild(myDiv);\n}\nexports.startPageLogic = startPageLogic;\n\n\n//# sourceURL=webpack://puzzle-demo-1/./src/startPage.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.startPageLogic = void 0;\nfunction startPageLogic() {\n    var myDiv = document.createElement('div');\n    myDiv.classList.add('myDiv');\n    myDiv.textContent = 'HELLOOOOOO!!!!!!!!!';\n    document.body.appendChild(myDiv);\n}\nexports.startPageLogic = startPageLogic;\n\n\n//# sourceURL=webpack://puzzle-demo-1/./src/startPage.ts?");
 
 /***/ })
 

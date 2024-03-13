@@ -1,4 +1,8 @@
-import { greetLogic }from './greet';
+//import { greetLogic }from './greet';
+import { createForm } from './greet';
+import { startPageLogic } from './startPage';
 
+//greetLogic();
 
-greetLogic();
+createForm();
+startPageLogic();
